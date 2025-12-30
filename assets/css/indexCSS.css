@@ -1,7 +1,153 @@
+/* =========================
+   RESET + BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f5f7fa;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background: #0f1c2e;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO (THIS IS .top-logo) */
 .top-logo {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  height: 50px;   /* adjust size */
+  height: 48px;
   width: auto;
+}
+
+/* NAVIGATION */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 24px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  background: linear-gradient(135deg, #0f1c2e, #1f3a5f);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #ff9f1c;
+  color: #000;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: #ffb347;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* =========================
+   CARDS
+========================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #0f1c2e;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav a {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .top-logo {
+    height: 40px;
+  }
 }
